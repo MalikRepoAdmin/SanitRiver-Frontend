@@ -1,11 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Api\SungaiApiController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\GambarSungaiController;
-use App\Http\Controllers\LaporanSungaiController;
-use App\Http\Controllers\SungaiController;
 use App\Http\Controllers\UserController;
 use Illuminate\http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 // Authentication routes
+/**
 Route::prefix('auth')->group(function () {
     Route::post('/register-user', [AuthController::class, 'registerUser']);
     Route::post('/register-admin', [AuthController::class, 'registerAdmin']);
@@ -35,3 +30,4 @@ Route::resource('users', UserController::class);
 
 // Special route for AJAX to get Bounding Box data (GeoJSON)
 Route::get('/sungai-bbox', [SungaiApiController::class, 'getWaterways'])->name('api.sungai.bbox');
+*/
