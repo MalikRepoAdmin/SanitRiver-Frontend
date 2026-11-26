@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('components.layouts.app')
 
 @section('title', 'Buat Laporan Sungai - SanitRiver')
 
