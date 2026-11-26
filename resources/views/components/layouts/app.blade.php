@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index-style.css') }}">
 
-    <!-- CSS -->
     <style>
         .map-container {
             width: 100vw;
@@ -36,25 +35,23 @@
             color: #007bff;
         }
     </style>
-    @livewireStyles()
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 </head>
 
 <body>
 
-    @include('components.layouts.partials.header')
+    @includeIf('components.layouts.partials.header')
 
     {{-- Blank area: every page fills this section --}}
     <main class="page-content">
-        {{-- @yield('content') --}}
-
-        {{ $slot }}
+        @yield('content')
     </main>
 
-    @include('components.layouts.partials.footer')
+    @includeIf('components.layouts.partials.footer')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    @livewireScripts
     @stack('scripts')
 </body>
 
